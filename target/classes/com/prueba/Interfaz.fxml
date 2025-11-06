@@ -7,23 +7,31 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.Pane?>
 
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.prueba.PersonaController">
    <children>
-      <TableView layoutX="41.0" layoutY="32.0" prefHeight="200.0" prefWidth="228.0">
+      <TableView fx:id="tPersona" layoutX="42.0" layoutY="32.0" onMouseClicked="#oaCliked" prefHeight="200.0" prefWidth="321.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="Nombre" />
-          <TableColumn prefWidth="75.0" text="Apellido" />
-            <TableColumn prefWidth="75.0" text="Edad" />
+            <TableColumn fx:id="cDni" prefWidth="75.0" text="DNI" />
+          <TableColumn fx:id="cNombre" prefWidth="75.0" text="Nombre" />
+          <TableColumn fx:id="cApellido" prefWidth="75.0" text="Apellido" />
+            <TableColumn fx:id="cEdad" prefWidth="75.0" text="Edad" />
         </columns>
       </TableView>
-      <Label layoutX="32.0" layoutY="244.0" text="Nombre" />
-      <Label layoutX="32.0" layoutY="277.0" text="Apellido" />
-      <Label layoutX="44.0" layoutY="313.0" text="Edad" />
-      <TextField fx:id="tfName" layoutX="81.0" layoutY="248.0" />
-      <TextField fx:id="tfSurname" layoutX="81.0" layoutY="280.0" />
-      <TextField fx:id="tfAge" layoutX="81.0" layoutY="318.0" />
-      <Button fx:id="btnEdit" layoutX="322.0" layoutY="60.0" mnemonicParsing="false" onAction="#oaEdit" text="Editar" />
-      <Button fx:id="btnadd" layoutX="322.0" layoutY="98.0" mnemonicParsing="false" onAction="#oaAdd" text="Añadir" />
+      <Label layoutX="32.0" layoutY="273.0" text="Nombre" />
+      <Label layoutX="32.0" layoutY="306.0" text="Apellido" />
+      <Label layoutX="44.0" layoutY="342.0" text="Edad" />
+      <TextField fx:id="tfName" layoutX="81.0" layoutY="277.0" />
+      <TextField fx:id="tfSurname" layoutX="81.0" layoutY="309.0" />
+      <TextField fx:id="tfAge" layoutX="81.0" layoutY="347.0" />
+      <Button fx:id="btnEdit" layoutX="431.0" layoutY="60.0" mnemonicParsing="false" onAction="#oaEdit" text="Editar" />
+      <Button fx:id="btnadd" layoutX="431.0" layoutY="98.0" mnemonicParsing="false" onAction="#oaAdd" text="Añadir" />
+      <Button layoutX="430.0" layoutY="133.0" mnemonicParsing="false" onAction="#oaPasarObjeto" text="Pasar a objetos" />
+      <Button layoutX="428.0" layoutY="168.0" mnemonicParsing="false" onAction="#oaProcedimiento" text="Ejecutar procedimiento" />
+      <Button layoutX="428.0" layoutY="200.0" mnemonicParsing="false" onAction="#oaMetodo" text="Ejecutar método" />
+      <Label fx:id="lError" layoutX="66.0" layoutY="378.0" prefHeight="17.0" prefWidth="461.0" />
+      <Label layoutX="40.0" layoutY="249.0" text="DNI" />
+      <TextField fx:id="tfDni" layoutX="81.0" layoutY="245.0" />
+      <Button layoutX="428.0" layoutY="232.0" mnemonicParsing="false" onAction="#oaDdl" text="Ejecutar DDL" />
+      <Button fx:id="btnCancelar" layoutX="248.0" layoutY="290.0" mnemonicParsing="false" onAction="#oaCancelarE" text="Cancelar edición" />
    </children>
 </Pane>
